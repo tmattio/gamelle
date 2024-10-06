@@ -33,7 +33,8 @@
     (tsdl-image (>= 0.6))
     (tsdl-mixer (>= 0.6))
     (tsdl-ttf (>= 0.6))
-    conf-sdl2-gfx
+    ; Removing for now, this is incompatible with Dune package management.
+    ; conf-sdl2-gfx
   ))
 
 (package
