@@ -29,6 +29,7 @@
   (name gamelle-sdl)
   (synopsis "Gamelle SDL")
   (depends
+    gamelle
     (tsdl (>= 1.0.0))
     (tsdl-image (>= 0.6))
     (tsdl-mixer (>= 0.6))
@@ -41,6 +42,7 @@
   (name gamelle-jsoo)
   (synopsis "Gamelle JSOO")
   (depends
+    gamelle
     (brr (= 0.0.6))
   ))
 
