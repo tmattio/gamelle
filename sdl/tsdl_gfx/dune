@@ -1,6 +1,6 @@
 (library
  (name tsdl_gfx)
- (package gamelle)
+ (package gamelle-sdl)
  (modules tsdl_gfx)
  (libraries ctypes tsdl result)
  (c_library_flags
