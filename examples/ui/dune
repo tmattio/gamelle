@@ -7,7 +7,7 @@
  (public_name ui)
  (name ui_bin)
  (modules ui_bin)
- (libraries ui gamelle.sdl))
+ (libraries ui gamelle-sdl))
 
 (rule
  (target ui_bin.ml)
@@ -20,7 +20,7 @@
  (name ui_js)
  (modules ui_js)
  (modes js)
- (libraries ui gamelle.jsoo))
+ (libraries ui gamelle-jsoo))
 
 (rule
  (target ui_js.ml)

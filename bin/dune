@@ -11,8 +11,9 @@
   imagelib
   imagelib.unix
   ocaml_inotify
+  threads
   (select
    asset_editor.ml
    from
-   (gamelle.sdl -> asset_editor.available.ml)
-   (!gamelle.sdl -> asset_editor.unavailable.ml))
+   (gamelle-sdl -> asset_editor.available.ml)
+   (!gamelle-sdl -> asset_editor.unavailable.ml))))

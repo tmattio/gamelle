@@ -7,7 +7,7 @@
  (public_name basic)
  (name basic_bin)
  (modules basic_bin)
- (libraries basic gamelle.sdl))
+ (libraries basic gamelle-sdl))
 
 (rule
  (target basic_bin.ml)
@@ -20,7 +20,7 @@
  (name basic_js)
  (modules basic_js)
  (modes js)
- (libraries basic gamelle.jsoo))
+ (libraries basic gamelle-jsoo))
 
 (rule
  (target basic_js.ml)
