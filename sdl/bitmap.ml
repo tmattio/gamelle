@@ -15,7 +15,21 @@ let of_texture ~io bmp =
 let sub t x y w h =
   Delayed.make @@ fun ~io ->
   let t = Delayed.force ~io t in
-  { bmp = t.bmp; bmp_x = t.bmp_x + x; bmp_y = t.bmp_y + y; w; h }
+  let renderer = io.backend.renderer in
+  let target_texture =
+    Sdl.create_texture renderer Sdl.Pixel.format_rgba8888
+      Sdl.Texture.access_target ~w ~h
+  in
+  match target_texture with
+  | Error (`Msg e) -> failwith ("Failed to create target texture: " ^ e)
+  | Ok target_texture ->
+      let original_target = Sdl.get_render_target renderer in
+      let _ = Sdl.set_render_target renderer (Some target_texture) in
+      let src_rect = Sdl.Rect.create ~x:(t.bmp_x + x) ~y:(t.bmp_y + y) ~w ~h in
+      let dst_rect = Sdl.Rect.create ~x:0 ~y:0 ~w ~h in
+      let _ = Sdl.render_copy renderer t.bmp ~src:src_rect ~dst:dst_rect in
+      let _ = Sdl.set_render_target renderer original_target in
+      { bmp = target_texture; bmp_x = 0; bmp_y = 0; w; h }
 
 let load binstring =
   Delayed.make @@ fun ~io ->
