@@ -1,3 +1,0 @@
-(executable
- (name screenshot)
- (libraries webdriver_cohttp-lwt-unix))
