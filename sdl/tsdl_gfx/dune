@@ -1,7 +1,14 @@
 (library
  (name tsdl_gfx)
- (optional)
  (package gamelle)
  (modules tsdl_gfx)
  (libraries ctypes tsdl result)
- (c_library_flags -lSDL2_gfx))
+ (c_library_flags
+  (:include c_library_flags.sexp)))
+
+(rule
+ (targets c_flags.sexp c_library_flags.sexp)
+ (deps
+  (:discover config/discover.exe))
+ (action
+  (run %{discover})))
