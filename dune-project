@@ -25,7 +25,7 @@
     (uuseg (>= 15.1.0))
     (imagelib (>= 20221222)))
   (depopts
-    (inotify (>= 2.1))
+
     (tsdl (>= 1.0.0))
     (tsdl-image (>= 0.6))
     (tsdl-mixer (>= 0.6))

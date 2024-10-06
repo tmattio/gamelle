@@ -1,20 +1,4 @@
-let to_string = function
-  | Inotify.Access -> "Access"
-  | Attrib -> "Attrib"
-  | Close_write -> "Close_write"
-  | Close_nowrite -> "Close_nowrite"
-  | Create -> "Create"
-  | Delete -> "Delete"
-  | Delete_self -> "Delete_self"
-  | Modify -> "Modify"
-  | Move_self -> "Move_self"
-  | Moved_from -> "Moved_from"
-  | Moved_to -> "Moved_to"
-  | Open -> "Open"
-  | Ignored -> "Ignored"
-  | Isdir -> "Isdir"
-  | Q_overflow -> "Q_overflow"
-  | Unmount -> "Unmount"
+open Ocaml_inotify
 
 let wait () = Unix.sleepf 0.01
 

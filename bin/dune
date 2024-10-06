@@ -10,13 +10,9 @@
   dynlink
   imagelib
   imagelib.unix
+  ocaml_inotify
   (select
    asset_editor.ml
    from
    (gamelle.sdl -> asset_editor.available.ml)
    (!gamelle.sdl -> asset_editor.unavailable.ml))
-  (select
-   hotreload.ml
-   from
-   (inotify -> hotreload.available.ml)
-   (!inotify -> hotreload.unavailable.ml))))
