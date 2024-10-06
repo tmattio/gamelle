@@ -16,4 +16,9 @@
    asset_editor.ml
    from
    (gamelle-sdl -> asset_editor.available.ml)
-   (!gamelle-sdl -> asset_editor.unavailable.ml))))
+   (!gamelle-sdl -> asset_editor.unavailable.ml))
+  (select
+   hotreload.ml
+   from
+   (gamelle-sdl -> hotreload.available.ml)
+   (!gamelle-sdl -> hotreload.unavailable.ml))))
