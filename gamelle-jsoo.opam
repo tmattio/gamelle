@@ -9,6 +9,7 @@ homepage: "https://github.com/art-w/gamelle"
 bug-reports: "https://github.com/art-w/gamelle/issues"
 depends: [
   "dune" {>= "3.15"}
+  "gamelle"
   "brr" {= "0.0.6"}
   "odoc" {with-doc}
 ]
